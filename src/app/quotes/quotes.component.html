@@ -3,13 +3,13 @@
     <hr>
       <div>
             <div *ngFor='let quote of quotes;let i=index'>
-                  <li>{{quote.name}}</li>
+                  <li>{{quote.name}}</li>  {{quote.completeDate|date}}
                   <div>
                         <button (click)='toggleDetails(i)'>Show detail</button>
                   </div>       
                   
                   <div>
-                        <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'></app-quote-detail>
+                        <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'(iscomplete)='deleteQuote($event,i)'></app-quote-detail>
                   </div>
                   <div>
                         <p><app-votes></app-votes></p>
