@@ -3,9 +3,9 @@
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' >
         <div class="form-group">
             <label>Quotes</label>
-            <textarea rows="5"></textarea>
+            <textarea rows="5"  id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel"></textarea>
             <label>Name</label>
-            <textarea id="description" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel"></textarea>
+            <!-- <textarea ></textarea> -->
             <div>
                 <label for complete>Post date</label>
                 <input type="date" id="complete">

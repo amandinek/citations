@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Quotes } from '../quotes';
-import { globalAgent } from 'https';
+// 
 
 @Component({
   selector: 'app-quotes',
@@ -9,10 +9,10 @@ import { globalAgent } from 'https';
 })
 export class QuotesComponent implements OnInit {
   quotes:Quotes[]=[
-    new Quotes('Change your thoughts and you change your world.',' Norman Vincent ',new Date(2019,8,23)),
-    new Quotes('Those who realize their folly are not true fools. ','Zhuangzi ',new Date(2019,8,23)),
-    new Quotes('It always seems impossible until it’s done. ','Nelson Mandela ',new Date(2019,8,23)),
-    new Quotes('It’s better to be a lion for a day than a sheep all your life.','Elizabeth Kenny',new Date(2019,8,23))
+    new Quotes(1,'Change your thoughts and you change your world.',' Norman Vincent ',new Date(2019,8,23)),
+    new Quotes(2,'Those who realize their folly are not true fools. ','Zhuangzi ',new Date(2019,8,23)),
+    new Quotes(3,'It always seems impossible until it’s done. ','Nelson Mandela ',new Date(2019,8,23)),
+    new Quotes(4,'It’s better to be a lion for a day than a sheep all your life.','Elizabeth Kenny',new Date(2019,8,23))
 
   ];
   
@@ -21,14 +21,13 @@ export class QuotesComponent implements OnInit {
   }
   deleteQuote(isComplete,index){
     if(isComplete){
-      let toDelete =confirm(`Do you want to delete the quote`)
-      if(toDelete){
         this.quotes.splice(index,1)
-      }
+      
     }
   }
   addNewQuote(quote){
-    let quoteLength=this.quotes.length;
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
     quote.completeDate= new Date(quote.completeDate)
     this.quotes.push(quote)
   }
