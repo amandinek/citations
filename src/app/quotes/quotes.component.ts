@@ -21,8 +21,7 @@ export class QuotesComponent implements OnInit {
   }
   deleteQuote(isDelete,index){
     if(isDelete){
-      console.log('hello')
-        this.quotes.splice(index,1)
+           this.quotes.splice(index,1)
       
     }
   }
