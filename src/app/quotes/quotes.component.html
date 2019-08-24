@@ -3,22 +3,26 @@
     <hr>
     <div class="row">
             <div class="col-md-6">
-                  <div *ngFor='let quote of quotes;let i=index'>
-                        <li appHigLight>{{quote.name}}</li>  {{quote.completeDate|date}}
-                        <div>
-                              <button class="btn btn-primary " (click)='toggleDetails(i)'>Show detail</button>
-                        </div>       
+                  
+                  <div id="quo">
+                        <div class="card"  *ngFor='let quote of quotes;let i=index'>
+                              <div class="card-body"><li appHigLight>{{quote.name}}</li>  {{quote.completeDate|date}}</div>
+                              
+                              <div>
+                                    <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isDelete)='deleteQuote($event,i)'></app-quote-detail>
+                              </div>
+                              <div class="card-footer">
+                                    <button class="btn btn-primary " (click)='toggleDetails(i)'>Show detail</button>
+                              </div>       
+                                    
                         
-                        <div>
-                              <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isDelete)='deleteQuote($event,i)'></app-quote-detail>
                         </div>
-                       
                   </div>
                   
 
             
             </div>      
-            <div class="col- md-6">
+            <div class="col- md-6" id="from">
                   <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
             </div>
     </div>         
