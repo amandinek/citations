@@ -1,16 +1,17 @@
 <div class="container">
-    <h2>New quote </h2>
+    <h1>New quote </h1>
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' >
         <div class="form-group">
-            <label>Quotes</label>
-            <textarea rows="5"  id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel"></textarea>
-            <label>Name</label>
-            <!-- <textarea ></textarea> -->
+            <label>Author</label><br>
+            <input type="name" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel"><br>
+            <label>Quotes</label><br>
+            <textarea rows="5"  id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel"></textarea>            
             <div>
                 <label for complete>Post date</label>
                 <input type="date" id="complete">
             </div>
-
+            <label>Submitter</label><br>
+            <input type="name" id="submitter" [(ngModel)]="newQuote.submitter" name="submitter" #submitter="ngModel">
         </div>
     </form>
     <button type="submit">submit</button>

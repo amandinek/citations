@@ -9,18 +9,19 @@ import { Quotes } from '../quotes';
 })
 export class QuotesComponent implements OnInit {
   quotes:Quotes[]=[
-    new Quotes(1,'Change your thoughts and you change your world.',' Norman Vincent ',new Date(2019,8,23)),
-    new Quotes(2,'Those who realize their folly are not true fools. ','Zhuangzi ',new Date(2019,8,23)),
-    new Quotes(3,'It always seems impossible until it’s done. ','Nelson Mandela ',new Date(2019,8,23)),
-    new Quotes(4,'It’s better to be a lion for a day than a sheep all your life.','Elizabeth Kenny',new Date(2019,8,23))
+    new Quotes(1,'Nelson Mandela','Change your thoughts and you change your world.',' Norman Vincent ',new Date(2019,12,23)),
+    new Quotes(2,'Zuangzi','Those who realize their folly are not true fools. ','Zhuangzi ',new Date(2019,12,23)),
+    new Quotes(3,'Nelson Mandela','It always seems impossible until it’s done. ','Nelson Mandela ',new Date(2019,12,23)),
+    new Quotes(4,'Elizabeth Kenny','It’s better to be a lion for a day than a sheep all your life.','Elizabeth Kenny',new Date(2019,12,23))
 
   ];
   
   toggleDetails(index){
     this.quotes[index].showDescription= ! this.quotes[index].showDescription
   }
-  deleteQuote(isComplete,index){
-    if(isComplete){
+  deleteQuote(isDelete,index){
+    if(isDelete){
+      console.log('hello')
         this.quotes.splice(index,1)
       
     }
