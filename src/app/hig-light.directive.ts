@@ -16,7 +16,7 @@ export class HigLightDirective {
   }
 
   private highlight(action:string){
-    this.elem.nativeElement.style.backgroundColor='yellow';
+    this.elem.nativeElement.style.backgroundColor='bisque';
 
   }
 

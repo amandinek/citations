@@ -4,8 +4,13 @@
 <p>
    submitter: {{quote.submitter}}
 </p>
-<div>
-   <p><app-votes></app-votes></p>
-</div>
-<button class="btn btn-danger " (click)='quoteDelete(true)'><img src="https://img.icons8.com/ios/24/000000/full-trash.png"></button>
-<p>the post was posted in {{quote.completeDate|dateCount}} </p>
+<div class="row">
+   
+   <div id="vote">
+      <p><app-votes></app-votes></p>
+   </div>
+   <div id="dle">
+   <button class="btn btn-primary" (click)='quoteDelete(true)'><img src="https://img.icons8.com/ios/24/000000/full-trash.png"></button>
+   </div>
+</div>   
+<p>the post was posted in {{quote.completeDate|dateCount}}days </p>

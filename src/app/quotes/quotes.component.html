@@ -1,12 +1,14 @@
 <div class="container-fluid">
-    <h1>Quotes</h1>
+    <h1 id="Q">Quotes</h1>
     <hr>
     <div class="row">
             <div class="col-md-6">
-                  
+                  <h1 id="some">Some quotes</h1>
                   <div id="quo">
                         <div class="card"  *ngFor='let quote of quotes;let i=index'>
-                              <div class="card-body"><li appHigLight>{{quote.name}}</li>  {{quote.completeDate|date}}</div>
+                              <div class="card-body">
+                                    <p appHigLight>{{quote.name}}</p>  {{quote.completeDate|date}}
+                              </div>
                               
                               <div>
                                     <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isDelete)='deleteQuote($event,i)'></app-quote-detail>
