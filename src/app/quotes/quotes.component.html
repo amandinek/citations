@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <h1>Quotes</h1>
     <hr>
     <div class="row">
@@ -6,7 +6,7 @@
                   <div *ngFor='let quote of quotes;let i=index'>
                         <li appHigLight>{{quote.name}}</li>  {{quote.completeDate|date}}
                         <div>
-                              <button (click)='toggleDetails(i)'>Show detail</button>
+                              <button class="btn btn-primary " (click)='toggleDetails(i)'>Show detail</button>
                         </div>       
                         
                         <div>

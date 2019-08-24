@@ -8,15 +8,15 @@ export class HigLightDirective {
   constructor(private elem:ElementRef){}
 
   @HostListener("click") onClicks(){
-    this.textDeco("underline")
+    this.highlight("highlight")
   }
 
   @HostListener("dblclick") onDoubleClicks(){
-    this.textDeco("None")
+    this.highlight("None")
   }
 
-  private textDeco(action:string){
-    this.elem.nativeElement.style.textDecoration=action;
+  private highlight(action:string){
+    this.elem.nativeElement.style.backgroundColor='yellow';
 
   }
 
