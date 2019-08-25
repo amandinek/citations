@@ -21,7 +21,7 @@ Allows you to Vote
 delete the quotes
 
 ## Link to deployed page
-
+ https://amandinek.github.io/citations/
 
 ## Used technologies
 
