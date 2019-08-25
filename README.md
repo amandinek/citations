@@ -21,7 +21,7 @@ Allows you to Vote
 delete the quotes
 
 ## Link to deployed page
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
 
 ## Used technologies
 
