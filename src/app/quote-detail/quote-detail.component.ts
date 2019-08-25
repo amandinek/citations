@@ -13,6 +13,7 @@ export class QuoteDetailComponent implements OnInit {
     this.isDelete.emit(complete);
   
   }
+  
 
   constructor() { }
 
