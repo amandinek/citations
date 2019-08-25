@@ -2,26 +2,31 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
 
-## Development server
+## Author's name 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Karambizi Amandine Gloria
 
-## Code scaffolding
+## Project name 
+Quotes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Description 
 
-## Build
+This is an app for writting new quotes and voting and deleting the quotes
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Specifications
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This app creates new quotes
+Allows you to Vote 
+delete the quotes
 
-## Running end-to-end tests
-
+## Link to deployed page
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Used technologies
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+HTML, CSS, Angular CLI,and Bootstrap
+
+## Lisence
+
+Copyright (c) 2019 Karambizi Amandine Gloria
